@@ -38,6 +38,13 @@ int main() {
   float SuperPoder2;
   int resultadoComparacao;
 
+  // Area para o jogador escolher qual dado ele quer comparar!
+  unsigned int CompararPopulacao;
+  float CompararArea;
+  float CompararPib;
+  float CompararDensidadePopulacional;
+  float CompararPibperCapita;
+
   // Área para entrada de dados
   
   // Cadastro Carta 1
@@ -90,8 +97,6 @@ int main() {
   printf("Numero de pontos turisticos: ");
   scanf(" %d", &pontosTuristicos2);
 
-
-
   // Área para exibição dos dados da cidade
 
   // Exibicao Carta 1
@@ -136,6 +141,19 @@ int main() {
   PIBperCapita2 = (float)resultado2 / populacao2;
   printf("PIB per Capita: %.2f reais\n", PIBperCapita2);
   SuperPoder2 = (float)populacao2 + area2 + pib2 + (float)pontosTuristicos2 + PIBperCapita2 + (1.0f / densidadePopulacional2);
+  printf("\n");
+
+  // Area para o jogador escolher qual dado ele quer comparar!
+
+  printf("=======Area da Comparacao de um unico dado========\n");
+
+  if (populacao1 > populacao2){
+    printf("$$$$Carta 1 Venceu o duelo$$$$\n");
+  } else {
+    printf("$$$$Carta 2 Venceu o duelo$$$$\n");
+  }
+
+
 
   // Área para comparação entre as cartas
 printf("\n"); // Adiciona uma linha em branco para separar as comparações
@@ -168,5 +186,27 @@ printf("\n"); // Adiciona uma linha em branco para separar as comparações
   // Super Poder (Maior vence)
   resultadoComparacao = SuperPoder1 > SuperPoder2;
   printf("Super Poder: %s venceu (%d)\n", resultadoComparacao ? "Carta 1" : "Carta 2", resultadoComparacao);
-return 0;
+printf("\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return 0;
 } 
